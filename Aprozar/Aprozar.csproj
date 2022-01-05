@@ -18,9 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="AddClient.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="CosEntryPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
