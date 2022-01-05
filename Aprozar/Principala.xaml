@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprozar.Principala"
+             BackgroundColor="#FFEBBB">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="60" Spacing="40">
+            <Label Text="Bun venit la"
+                FontSize="Large"
+                TextColor="DarkGreen"
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Fresh corner"
+                   FontSize="23"
+                   TextColor="DarkGreen"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" 
+                   CharacterSpacing="5"
+                   FontAttributes="Bold"
+                   TextTransform="Uppercase"/>
+            <Button x:Name="citesteclient" Text="Clienti" Clicked="viewClient"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#E0FFCD" 
+                    TextColor="DarkGreen" 
+                    FontSize="Large"
+                    CornerRadius="20"
+                    BorderColor="DarkGreen"
+                    BorderWidth="1"/>
+            <Button x:Name="citesteFurnizor" Text="Furnizori" Clicked="viewFurnizor"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#E0FFCD" 
+                    TextColor="DarkGreen"
+                    FontSize="Large"
+                    CornerRadius="20"
+                    BorderColor="DarkGreen"
+                    BorderWidth="1"/>
+            <Button x:Name="citesteCategorie" Text="Categorii Produse"  Clicked="viewCategorie"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#E0FFCD" 
+                    TextColor="DarkGreen"
+                    FontSize="Large"
+                    CornerRadius="20"
+                    BorderColor="DarkGreen"
+                    BorderWidth="1"/>
+            <Button x:Name="citesteProdus" Text="Produse"  Clicked="viewProdus"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#E0FFCD" 
+                    TextColor="DarkGreen"
+                    FontSize="Large"
+                    CornerRadius="20"
+                    BorderColor="DarkGreen"
+                    BorderWidth="1"/>
+            <Button x:Name="citesteComanda" Text="Comanda"  Clicked="viewComanda"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#E0FFCD" 
+                    TextColor="DarkGreen"
+                    FontSize="Large"
+                    CornerRadius="20"
+                    BorderColor="DarkGreen"
+                    BorderWidth="1"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprozar.ListCategorie"
+             BackgroundColor="#FFEBBB">
+    <StackLayout Margin="20">
+        <Editor Placeholder="Introduceti denumirea categoriei" PlaceholderColor="Black" TextColor="black" Text="{Binding Denumire}" HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button BackgroundColor="#FFCAB0" TextColor="Black" Text="Adaugati" Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1" BackgroundColor="#ffcab0" TextColor="black" Text="Stergeti categorie" Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

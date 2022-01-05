@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprozar.ReadComanda"
+             BackgroundColor="#FFEBBB">
+    <StackLayout Margin="20">
+        <Button BackgroundColor="#FFCAB0" TextColor="Black" Text="Realizati comanda" Clicked="OnCreateButtonClicked" />
+        <Button BackgroundColor="#FFCAB0" TextColor="black" Text="Vizualizati comenzi" Clicked="OnViewButtonClicked"/>
+        <ListView x:Name="listView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HasUnevenRows="true" ItemSelected="OnListViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label TextColor="Black" BackgroundColor="#ffcab0" Text="{Binding ID}"/>
+                        <Label TextColor="Black" Text="{Binding Cantitate}"/>
+                        <Label TextColor="Black" Text="{Binding ID_Client}"/>
+                        <Label TextColor="Black" Text="{Binding ID_Produs}"/>
+                        </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </StackLayout>
+</ContentPage>
+    

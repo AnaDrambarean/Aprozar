@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprozar.ListProdus"
+             xmlns:local="clr-namespace:Aprozar"
+             BackgroundColor="#FFEBBB">
+    <StackLayout Margin="20">
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti denumirea produsului" Text="{Binding Denumire}" HeightRequest="100"/>
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti tara de origine" Text="{Binding TaraOrigine}" HeightRequest="100" />
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti pretul" Text="{Binding Pret,StringFormat='lei/kg'}"  HeightRequest="100" />
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti ID-ul categoriei (1-fructe, 2-legume)" Text="{Binding ID_Categorie}" HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Salvare" BackgroundColor="#FFCAB0" TextColor="black" Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1" BackgroundColor="#ffcab0" TextColor="black" Text="Stergeti produs" Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprozar.ListComanda"
+             xmlns:local="clr-namespace:Aprozar"
+             BackgroundColor="#FFEBBB">
+    <StackLayout Margin="20">
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti cantitatea" Text="{Binding Cantitate}" HeightRequest="100">
+            <Editor.Behaviors>
+                <local:NumarValidationBehavior/>
+            </Editor.Behaviors>
+        </Editor>
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti ID-ul de client" Text="{Binding ID_Client}" HeightRequest="100">
+            <Editor.Behaviors>
+                <local:NumarValidationBehavior/>
+            </Editor.Behaviors>
+        </Editor>
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti ID-ul produsului" Text="{Binding ID_Produs}" HeightRequest="100">
+            <Editor.Behaviors>
+                <local:NumarValidationBehavior/>
+            </Editor.Behaviors>
+        </Editor>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button BackgroundColor="#FFCAB0" TextColor="Black" Text="Salvati" Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1" BackgroundColor="#ffcab0" TextColor="black" Text="Stergeti comanda" Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

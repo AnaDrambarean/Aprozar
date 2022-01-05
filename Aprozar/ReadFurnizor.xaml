@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprozar.ReadFurnizor"
+             BackgroundColor="#FFEBBB">
+    <StackLayout Margin="20">
+        <Button BackgroundColor="#FFCAB0" TextColor="Black" Text="Adaugare furnizor" Clicked="OnFurnizorAddedClicked" />
+        <Button BackgroundColor="#FFCAB0" TextColor="Black" Text="Vizualizare furnizori" Clicked="OnFurnizorAddedView" />
+        <ListView x:Name="listView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HasUnevenRows="true" ItemSelected="OnListViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label TextColor="Black" BackgroundColor="#ffcab0" Text="{Binding ID}"/>
+                        <Label TextColor="Black" Text="{Binding Nume}"/>
+                        <Label TextColor="Black" Text="{Binding Email}"/>
+                        <Label TextColor="Black" Text="{Binding Adresa}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </StackLayout>
+</ContentPage>

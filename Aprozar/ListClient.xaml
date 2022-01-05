@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aprozar.ListClient"
+             xmlns:local="clr-namespace:Aprozar"
+             BackgroundColor="#FFEBBB">
+    <StackLayout Margin="20">
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti numele" Text="{Binding Nume}" HeightRequest="100"/>
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti prenumele" Text="{Binding Prenume}" HeightRequest="100" />
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti adresa de email" Text="{Binding Email}" HeightRequest="100" >
+            <Editor.Behaviors>
+                <local:EmailValidationBehavior/>
+            </Editor.Behaviors>
+        </Editor>
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti numarul de telefon" Text="{Binding NumarTelefon}" HeightRequest="100" >
+            <Editor.Behaviors>
+                <local:NrTfValidationBehavior/>
+            </Editor.Behaviors>
+        </Editor>
+        <Editor TextColor="Black" PlaceholderColor="black" Placeholder="Introduceti adresa de domiciliu" Text="{Binding Adresa}" HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Salvare" BackgroundColor="#FFCAB0" TextColor="black" Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1" BackgroundColor="#ffcab0" TextColor="black" Text="Stergeti client" Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
